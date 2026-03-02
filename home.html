@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityFix - Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>CityFix</h1>
+        <nav>
+            <a href="admin/login.html">Admin Login</a>
+            <a href="public/login.html">User Login</a>
+            <a href="workers/login.html">Worker Login</a>
+            <a href="public/register.html">Register</a>
+
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Together, We Build Better Cities</h2>
+            <p>Report civic issues, stay informed, and make your community cleaner, safer, and smarter.</p>
+            <div class="hero-note">
+                <span>💡 Your action today shapes the city of tomorrow.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="card">
+            <h3>📍 Easy Reporting</h3>
+            <p>Submit issues with location and description in seconds.</p>
+        </div>
+        <div class="card">
+            <h3>📊 Track Status</h3>
+            <p>Monitor progress from submission to resolution.</p>
+        </div>
+        <div class="card">
+            <h3>🏙 Improve Your City</h3>
+            <p>Contribute to a cleaner and better community.</p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 CityFix | Clean & Green Technology</p>
+    </footer>
+
+    <!-- JS for Quotes Animation -->
+    <script>
+        const quotes = [
+            '"The best way to predict the future is to create it." – Peter Drucker',
+            '"Small acts, when multiplied by millions, can transform the world." – Howard Zinn',
+            '"Civic responsibility begins with you." – Unknown',
+            '"A cleaner city starts with you." – CityFix'
+        ];
+
+        let index = 0;
+        const quoteElement = document.getElementById("quote");
+
+        function showQuote() {
+            quoteElement.style.opacity = 0; // fade out
+            setTimeout(() => {
+                quoteElement.textContent = quotes[index];
+                quoteElement.style.opacity = 1; // fade in
+                index = (index + 1) % quotes.length;
+            }, 600);
+        }
+
+        setInterval(showQuote, 5000);
+    </script>
+
+</body>
+</html>

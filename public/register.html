@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CityFix - Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<header>
+    <h1>CityFix</h1>
+    <nav>
+        <a href="../home.html">Home</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<section class="register-section">
+    <h2>User Registration</h2>
+
+    <form id="registerForm" action="/api/register" method="POST">
+        <div class="input-group">
+            <input type="text" name="fullname" placeholder=" " required>
+            <label>Full Name</label>
+        </div>
+
+        <div class="input-group">
+            <input type="email" name="email" placeholder=" " required>
+            <label>Email</label>
+        </div>
+
+        <div class="input-group">
+            <input type="tel" name="mobile" placeholder=" " pattern="[0-9]{10}" required>
+            <label>Mobile Number</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" name="password" placeholder=" " required>
+            <label>Password</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" name="confirmPassword" placeholder=" " required>
+            <label>Confirm Password</label>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+</section>
+
+<footer>
+    <p>© 2026 CityFix | Clean & Green Technology</p>
+</footer>
+
+</body>
+</html>
