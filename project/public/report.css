@@ -1,0 +1,157 @@
+/* ================= Reset & Body ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    min-height: 100vh;
+}
+
+/* ================= Header ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #111827;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+header h1 {
+    color: #22c55e;
+    font-size: 28px;
+}
+nav a {
+    color: white;
+    margin-left: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #22c55e;
+    transform: scale(1.05);
+}
+
+/* ================= Report Form Section ================= */
+.report-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+.report-container {
+    background: #1f2937;
+    padding: 40px;
+    border-radius: 12px;
+    width: 450px;
+    animation: fadeIn 1s ease forwards;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+.report-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #22c55e;
+}
+
+/* ================= Input Groups ================= */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 6px;
+    border: none;
+    background: #2a2a2a;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border: 1px solid #22c55e;
+}
+.input-group label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+    background: #1f2937;
+    padding: 0 5px;
+}
+.input-group input:focus + label,
+.input-group select:focus + label,
+.input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #22c55e;
+}
+
+/* ================= Buttons ================= */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #22c55e;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+button:hover {
+    background: #16a34a;
+}
+
+/* ================= File Input ================= */
+.input-group input[type="file"] {
+    padding: 6px;
+    cursor: pointer;
+    background: #2a2a2a;
+}
+.input-group input[type="file"]:hover {
+    border: 1px solid #22c55e;
+}
+
+/* ================= Footer ================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+    color: #94a3b8;
+    margin-top: 40px;
+}
+
+/* ================= Animations ================= */
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+/* ================= Responsive ================= */
+@media(max-width: 480px) {
+    .report-container { width: 90%; padding: 30px; }
+    header { flex-direction: column; gap: 10px; }
+    nav a { margin-left: 0; margin-right: 20px; }
+}
+textarea{
+    resize: none;
+}
