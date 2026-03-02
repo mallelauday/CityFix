@@ -1,0 +1,118 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Login Container */
+.login-container {
+    background: #1f2937;
+    padding: 40px;
+    border-radius: 10px;
+    width: 380px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease;
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #22c55e;
+    margin-bottom: 10px;
+}
+
+.login-container h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+/* Input Groups */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border: 1px solid #22c55e;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    color: #22c55e;
+    background: #1f2937;
+    padding: 0 4px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #22c55e;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    color: black;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+/* Back Home link */
+.back-home {
+    margin-top: 20px;
+}
+
+.back-home a {
+    color: #22c55e;
+    text-decoration: none;
+}
+
+.back-home a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
